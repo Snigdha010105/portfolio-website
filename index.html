@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .background-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        
+
+        .background-container img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: absolute; 
+    bottom: 20px; 
+    left: 0;
+    right: 0;
+    margin: auto; 
+}
+
+
+        .buttons button {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px; 
+            font-size: 16px;
+            font-family: monospace; 
+            cursor: pointer;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+
+        .buttons button:hover {
+            transform: scale(1.1);
+            background-color: #333; 
+        }
+    </style>
+</head>
+<body>
+    <div class="background-container">
+        <img src="Portfolio cover 2-01.png" alt="Background Image">
+        <div class="buttons">
+            <button onclick="location.href='http://127.0.0.1:5500/mid%20term%20folder/Final.html/About%20me.html'">About Me</button>
+            <button onclick="location.href='artworks.html'">Artworks</button>
+            <button onclick="location.href='resume.html'">Resume</button>
+        </div>
+    </div>
+</body>
+</html>

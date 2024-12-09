@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full-Screen Carousel</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Courier New", Courier, monospace;
+      background-color: #fdfff5;
+      overflow: hidden;
+    }
+    .carousel-container {
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
+    .carousel {
+      display: flex;
+      height: 100%;
+      width: 100%;
+    }
+    .carousel-content {
+      display: flex;
+      height: 100%;
+      transition: transform 0.6s ease-in-out;
+    }
+    .carousel-page {
+      flex: 0 0 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: row; /* Images and text side-by-side */
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      background-color: #f8f8e4;
+    }
+    .carousel-page img {
+  max-width: 100%; 
+  max-height: 687px; 
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  object-fit: contain;
+}
+
+.fixed-size-image {
+  width: 616px;
+  height: 616px;
+  max-width: 616px;
+  max-height: 616px;
+}
+
+    .carousel-page .text-content {
+      flex: 1; /* Text takes up 50% of space */
+      padding: 20px;
+      text-align: left;
+    }
+    .carousel-page h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #000;
+    }
+    .carousel-page p {
+      font-size: 1.2rem;
+      color: #333;
+      line-height: 1.6;
+    }
+    .controls {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+    .control-btn {
+      background-color: black;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      font-size: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+    .control-btn:hover {
+      background-color: #333;
+    }
+    .back-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+      background-color: black;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      text-align: center;
+      text-decoration: none;
+    }
+    .back-btn:hover {
+      transform: scale(1.1);
+      background-color: #333;
+    }
+  </style>
+</head>
+<body>
+
+<div class="carousel-container">
+  <div class="carousel">
+    <div class="carousel-content">
+    
+      <div class="carousel-page">
+        <img src="artwork 1.png" alt="Image 1">
+        <div class="text-content">
+          <a href="http://127.0.0.1:5500/mid%20term%20folder/Final.html/final.html" class="back-btn">Back</a>
+          <h2>Chronicles Of Blackletter Poster</h2>
+          <p>This was a poster illustrated to promote the font booklet “Chronicles of Blackletter”. 
+          This poster was made using Procreate, Adobe Illustrator, and Photoshop. 
+          The poster is inspired by Marvel movie posters where all superheroes are placed in a sort of collage. 
+          The style and color scheme are inspired by Greek mythology as Greek gods and goddesses are featured in the booklet.</p>
+        </div>
+      </div>
+
+      <div class="carousel-page">
+        <img src="artwork 2.png" alt="Image 2">
+        <div class="text-content">
+          <a href="http://127.0.0.1:5500/mid%20term%20folder/Final.html/final.html" class="back-btn">Back</a>
+          <h2>Woman in Shackles</h2>
+          <p>This illustration, inspired by the Baroque period, spreads awareness about mental health struggles. 
+          The woman symbolizes the modern human, with shackles representing anxiety, depression, and stress. 
+          The single teardrop depicts the internalized struggle, and the outstretched hand symbolizes seeking help.</p>
+        </div>
+      </div>
+
+      <div class="carousel-page">
+        <img src="artwork 3.png" alt="Image 3" class="fixed-size-image">
+        <div class="text-content">
+          <a href="http://127.0.0.1:5500/mid%20term%20folder/Final.html/final.html" class="back-btn">Back</a>
+          <h2>Frog Island</h2>
+          <p>This illustration is a personal project portraying a frog on a floating island. 
+          The frog personifies me, featuring 5 piercings and a skull with a knife, symbolizing my personality. 
+          The nature-themed island is inspired by the concept art from the Tinker Bell movies.</p>
+        </div>
+      </div>
+      
+
+      <div class="carousel-page">
+        <img src="artwork 4.png" alt="Image 4">
+        <div class="text-content">
+          <a href="http://127.0.0.1:5500/mid%20term%20folder/Final.html/final.html" class="back-btn">Back</a>
+          <h2>Back to haunt</h2>
+          <p>This will be a reunion album by the original members of Guns N' Roses as they had gone their separate ways a while ago. 
+            ELEMENT: 
+            Back Story: The band had been formed in 1985 when the two bands "Hollywood Rose" and "L.A. Guns" merged, that is why the band is called "Guns N' Roses''.
+             Skull
+             Roses coming out of the skull
+             Guns
+            REASONING:
+             The skull represents death, so the album name "BACK TO HAUNT" suggests that they are back from the dead
+             The roses and guns denote the history behind the formation of the band as well as the origin of the band name.
+            
+            </p>
+        </div>
+      </div>
+
+      <div class="carousel-page">
+        <img src="artwork 5.png" alt="Image 5">
+        <div class="text-content">
+          <a href="http://127.0.0.1:5500/mid%20term%20folder/Final.html/final.html" class="back-btn">Back</a>
+          <h2>Russian Revolution</h2>
+          <p>This is an illustration of the four main stages of the russian revolution,
+            this illsutration was done as a part of 4 other frames for a comic book called thoughts of revolution.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="controls">
+    <button class="control-btn" id="prevBtn">&lt;</button>
+    <button class="control-btn" id="nextBtn">&gt;</button>
+  </div>
+</div>
+
+<script>
+  const carouselContent = document.querySelector('.carousel-content');
+  const pages = document.querySelectorAll('.carousel-page');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+
+  let currentPage = 0;
+
+  function updateCarousel() {
+    const offset = -currentPage * 100;
+    carouselContent.style.transform = `translateX(${offset}vw)`;
+  }
+
+  prevBtn.addEventListener('click', () => {
+    if (currentPage > 0) {
+      currentPage--;
+      updateCarousel();
+    }
+  });
+
+  nextBtn.addEventListener('click', () => {
+    if (currentPage < pages.length - 1) {
+      currentPage++;
+      updateCarousel();
+    }
+  });
+</script>
+
+</body>
+</html>
